@@ -33,7 +33,6 @@
             <tr>
                 <td>{app.id}</td>
                 <td><a href={"#/apps/" + app.id}>{app.name}</a></td>
-                <!-- <td>{location.gender}</td> -->
             </tr>
             {/each}
         </tbody>

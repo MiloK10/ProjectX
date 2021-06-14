@@ -26,34 +26,23 @@
 		{ id: 3, done: false, description: 'User details' },
 		{ id: 4, done: false, description: 'Create users' },
 		{ id: 5, done: false, description: 'Permissions' },
-		{ id: 6, done: false, description: 'Locations' },
-        { id: 7, done: false, description: 'Location Details'},
-        { id: 8, done: false, description: 'Hosting'},
+		{ id: 6, done: false, description: 'Nodes' },
+		{ id: 7, done: false, description: 'Apps' },
+        { id: 8, done: false, description: 'App Details'},
+        { id: 9, done: false, description: 'Hosting'},
 	];
-
-	// let uid = checks.length + 1;
-
-	// function add(input) {
-	// 	const check = {
-	// 		id: uid++,
-	// 		done: false,
-	// 		description: input.value
-	// 	};
-
-	// 	checks = [check, ...checks];
-	// 	input.value = '';
-	// }
 
 	// each block bindings 
 	let todos = [
-		{ done: false, text: 'clock - navigation' },
-		{ done: false, text: 'transitions directive - anywhere - no additional things needed' },
-		{ done: false, text: 'reactive statements - anywhere - no additional things needed' },
-		{ done: false, text: 'add svelte window bindings - homepage - no additional things needed' },
-		{ done: false, text: 'each block bindings - form or hosting - no additional things needed' },
-		{ done: false, text: 'inputs and validation for the forms - need to consult' },
-		{ done: false, text: 'derived stores - footer or bottom of the page - need to consult' },
-		{ done: false, text: 'modal - anywhere - need to consult' },
+		{ done: false, text: 'clock in navigation bar' },
+		{ done: false, text: 'transitions on homepage' },
+		{ done: false, text: 'reactive statements on homepage' },
+		{ done: false, text: 'animate directive on hosting page' },
+		{ done: false, text: 'each block bindings on hosting page' },
+		{ done: false, text: 'form with validation' },
+		{ done: false, text: 'derived stores - time spent on page in footer' },
+		{ done: false, text: 'bootstrap elements - tables, accordions, buttons, along with container and other more boring parts' },
+		{ done: false, text: 'css for styling, both global and per page' },
 	];
 
 	function addToDO() {
@@ -71,7 +60,7 @@
 
 <!-- To-do's -->
 <div class="container my-2">
-	<h3>To-do's</h3>
+	<h3>Elements</h3>
 	{#each todos as todo}
 		<div class="my-2">
 			<input type=checkbox bind:checked={todo.done}>
@@ -88,31 +77,14 @@
 			Clear completed tasks
 		</button>
 
-		{remaining} tasks left to do
+		{remaining} {remaining===1 ? 'task' : 'tasks'} left to do
 	</span>
 
 </div>
 
-<!-- List of things to do -->
-<ul>
-    <li>inputs and validation for the forms - need to consult</li>
-	<li>consult on how to get some .js and other files to work as elements in svelte</li>
-    <li>derived stores - footer or bottom of the page - need to consult</li>
-    <li>slot props - anywhere - need to consult</li>
-    <li>modal - anywhere - need to consult</li>
-	<li><del>clock - navigation</del></li>
-    <li><del>transitions directive - anywhere - no additional things needed</del></li>
-    <li><del>reactive statements - anywhere - no additional things needed</del></li>
-    <li><del>each block bindings - form or hosting - no additional things needed</del></li> 
-</ul>
-
 <!-- Checked pages -->
 <div class='row p-3 m-2' id="directive">
-	<!-- <input
-		class="new-check"
-		placeholder="what needs to be done?"
-		on:keydown="{event => event.key === 'Enter' && add(event.target)}"
-	> -->
+
 	<div class='left'>
 		<h2>Pages to check</h2>
 		{#each checks.filter(t => !t.done) as check (check.id)}
@@ -123,7 +95,6 @@
 			>
 				<input type=checkbox bind:checked={check.done}>
 				{check.description}
-				<!-- <button on:click="{() => remove(check)}">x</button> -->
 			</label>
 		{/each}
 	</div>
@@ -138,7 +109,6 @@
 			>
 				<input type=checkbox bind:checked={check.done}>
 				{check.description}
-				<!-- <button on:click="{() => remove(check)}">x</button> -->
 			</label>
 		{/each}
 	</div>

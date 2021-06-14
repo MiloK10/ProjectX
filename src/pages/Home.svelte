@@ -7,7 +7,7 @@
     let count = 5;
 
     $: if (count <= 0) {
-        alert(`here is the link: `);
+        alert(`here is the link: https://1drv.ms/v/s!AlawxW0w_xgdgdwVBNJZicjvEfyJPQ?e=qA7F5u`);
         count = 1;
     }
 
@@ -20,7 +20,7 @@
     <img class="img-fluid logo" alt="Krakow" src="images/krakow.jpg" />
 </div>
 
-<h1 class="p-3">Welcome to my final project form Web Engineering</h1>
+<h1 class="p-3">Welcome to my final project from Web Engineering</h1>
 
 <!-- Checkbox to reveal video -->
 <div class="text-center">

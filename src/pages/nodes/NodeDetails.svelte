@@ -52,7 +52,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-folders">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFolders" aria-expanded="false" aria-controls="flush-collapseFolders">
-                        List of all folders for this node
+                        List of all folders this node contains
                     </button>
                 </h2>
                 <div id="flush-collapseFolders" class="accordion-collapse collapse" aria-labelledby="flush-folders" data-bs-parent="#folders">
@@ -62,7 +62,6 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Folder above</th>
                                     <th>Bio</th>
                                 </tr>
                             </thead>
@@ -72,7 +71,6 @@
                                 <tr>
                                     <td>{folder.id}</td>
                                     <td>{folder.name}</td>
-                                    <td>{folder.folder.name}</td>
                                     <td>{folder.bio}</td>
                                 </tr>
                                 {/each}
@@ -91,7 +89,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-files">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFile" aria-expanded="false" aria-controls="flush-collapseFile">
-                        List of all files for this node
+                        List of all files this node contains
                     </button>
                 </h2>
                 <div id="flush-collapseFile" class="accordion-collapse collapse" aria-labelledby="flush-files" data-bs-parent="#files">
@@ -101,7 +99,6 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Folder above</th>
                                     <th>Date</th>
                                 </tr>
                             </thead>
@@ -111,7 +108,6 @@
                                 <tr>
                                     <td>{file.id}</td>
                                     <td>{file.name}</td>
-                                    <td>{file.folder.name}</td>
                                     <td>{file.date}</td>
                                 </tr>
                                 {/each}

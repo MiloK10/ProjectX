@@ -2,8 +2,6 @@
     import axios from "axios";
     import {} from "os";
 
-    // import { bind } from "svelte/internal";
-
     let user = {
         name: "",
         gender: "",
